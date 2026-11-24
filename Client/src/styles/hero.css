@@ -1,0 +1,377 @@
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 110px 9% 60px;
+  gap: 65px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(124, 58, 237, 0.15),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(190, 24, 93, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(37, 99, 235, 0.08),
+      transparent 28%
+    ),
+    #02030a;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  flex: 1 1 58%;
+  max-width: 720px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   AVAILABILITY INDICATOR
+========================================================= */
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  padding: 8px 14px;
+
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  border-radius: 30px;
+  background: rgba(139, 92, 246, 0.08);
+
+  color: #c4b5fd;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.65);
+}
+
+/* =========================================================
+   HERO SUBTITLE
+========================================================= */
+
+.hero-subtitle {
+  margin-bottom: 22px;
+  color: #c4b5fd;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+/* =========================================================
+   HERO NAME
+========================================================= */
+
+.hero h1 {
+  font-size: clamp(3rem, 5.2vw, 5.2rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -2px;
+  white-space: nowrap;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #d8b4fe,
+    #f9a8d4
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================================
+   HERO ROLE
+========================================================= */
+
+.hero-role {
+  margin-top: 25px;
+  color: #d1d5e3;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+}
+
+.hero-role span {
+  margin: 0 10px;
+  color: #d946ef;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 540px;
+  margin-top: 18px;
+  color: #aeb8ca;
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-actions {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 27px;
+  border-radius: 999px;
+
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.primary-btn {
+  border: 1px solid rgba(196, 181, 253, 0.4);
+
+  background: linear-gradient(
+    135deg,
+    #6b21a8,
+    #9d174d
+  );
+
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.16);
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  border-color: #d8b4fe;
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.3),
+    0 0 40px rgba(236, 72, 153, 0.16);
+}
+
+.secondary-btn {
+  border: 1px solid rgba(196, 181, 253, 0.55);
+  background: rgba(139, 92, 246, 0.07);
+  color: #e9d5ff;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-4px);
+  border-color: #d8b4fe;
+  background: rgba(139, 92, 246, 0.17);
+
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.18);
+}
+
+/* =========================================================
+   CIRCULAR PROFILE IMAGE
+========================================================= */
+
+.hero-image {
+  flex: 0 1 40%;
+  max-width: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image-circle {
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+  padding: 5px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #c4b5fd,
+    #9333ea,
+    #db5ca8,
+    #7c3aed
+  );
+
+  box-shadow:
+    0 0 22px rgba(168, 85, 247, 0.22),
+    0 0 45px rgba(168, 85, 247, 0.10);
+}
+
+.hero-image-circle img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  border: 3px solid #080614;
+}
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    gap: 35px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-content {
+    min-width: 0;
+  }
+
+  .hero-image {
+    flex-basis: 38%;
+  }
+
+  .hero-image-circle {
+    width: min(100%, 310px);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.4vw, 4.2rem);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    padding: 160px 20px 60px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .availability {
+    margin-bottom: 18px;
+    font-size: 0.62rem;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+    letter-spacing: -1px;
+    white-space: normal;
+  }
+
+  .hero-role {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 70%;
+    max-width: 290px;
+    flex: none;
+  }
+
+  .hero-image-circle {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 150px 16px 50px;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .hero-image {
+    width: 68%;
+    max-width: 250px;
+  }
+}

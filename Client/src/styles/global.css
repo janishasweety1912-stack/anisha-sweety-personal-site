@@ -1,0 +1,98 @@
+
+/* =========================================================
+   GLOBAL STYLES
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #02030a;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =========================================================
+   COMMON SECTION SETTINGS
+========================================================= */
+
+.hero,
+.about-section,
+.education-section,
+.skills-section,
+.projects-section,
+.experience-section,
+.certifications-section,
+.achievements-section,
+.resume-section,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   CONTENT ABOVE STAR FIELD
+========================================================= */
+
+.hero > *:not(.stars),
+.about-section > *:not(.stars),
+.education-section > *:not(.stars),
+.skills-section > *:not(.stars),
+.projects-section > *:not(.stars),
+.experience-section > *:not(.stars),
+.certifications-section > *:not(.stars),
+.achievements-section > *:not(.stars),
+.resume-section > *:not(.stars),
+.contact-section > *:not(.stars) {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SHARED SECTION HEADINGS
+========================================================= */
+
+.about-heading h2,
+.education-heading h2,
+.skills-heading h2,
+.projects-heading h2,
+.experience-heading h2,
+.certifications-heading h2,
+.achievements-heading h2,
+.resume-heading h2,
+.contact-heading h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #d8b4fe,
+    #f9a8d4
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

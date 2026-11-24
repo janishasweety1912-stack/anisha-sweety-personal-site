@@ -1,0 +1,74 @@
+/* =========================================================
+   STAR FIELD CONTAINER
+========================================================= */
+
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+   INDIVIDUAL STAR
+========================================================= */
+
+.star {
+  position: absolute;
+  left: var(--star-left);
+  top: var(--star-top);
+  width: var(--star-size);
+  height: var(--star-size);
+  border-radius: 50%;
+  background: var(--star-color);
+  opacity: var(--star-opacity);
+
+  box-shadow:
+    0 0 3px var(--star-color),
+    0 0 7px rgba(196, 181, 253, 0.18);
+
+  animation: starTwinkle
+    var(--star-duration)
+    ease-in-out
+    var(--star-delay)
+    infinite alternate;
+}
+
+/* =========================================================
+   STAR VARIATIONS
+========================================================= */
+
+.star.bright {
+  box-shadow:
+    0 0 4px var(--star-color),
+    0 0 9px var(--star-color),
+    0 0 16px rgba(196, 181, 253, 0.20);
+}
+
+.star.tiny {
+  box-shadow: 0 0 2px var(--star-color);
+}
+
+/* =========================================================
+   STAR ANIMATION
+========================================================= */
+
+@keyframes starTwinkle {
+  0% {
+    opacity: var(--star-opacity);
+    transform: scale(1);
+  }
+  35% {
+    opacity: calc(var(--star-opacity) * 0.55);
+    transform: scale(0.85);
+  }
+  65% {
+    opacity: calc(var(--star-opacity) * 1.15);
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: var(--star-opacity);
+    transform: scale(1);
+  }
+}

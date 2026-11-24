@@ -1,0 +1,42 @@
+
+/* =========================================================
+   SUBTLE SECTION ATMOSPHERE
+========================================================= */
+
+.about-section,
+.education-section,
+.skills-section,
+.projects-section,
+.experience-section,
+.certifications-section,
+.achievements-section,
+.resume-section,
+.contact-section {
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(76, 29, 149, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(190, 24, 93, 0.06),
+      transparent 30%
+    ),
+    #02030a;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
